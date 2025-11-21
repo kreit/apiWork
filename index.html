@@ -14,21 +14,53 @@
 <body>
     
     <div class="api-section">
-        <h1>
-            Part 1: Random Dog Generator
-        </h1>
+        <h1>Part 1: Random Dog Generator</h1>
         <div class="api-content">
-            <button type="button" id="button">Random Dog Pictures!</button>
-            <img src="" id="image" alt="">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Get a Random Dog Picture!</h5>
+                    <button type="button" id="button" class="btn btn-primary">Show Me Dogs! 🐕</button>
+                    <img src="" id="image" class="card-img-top mt-3" alt="Random dog">
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="api-section">
-        <h1>
-            Part 2: Pokedex
-        </h1>
+        <h1>Part 2: Pokédex</h1>
         <div class="api-content">
-            [INSERT POKEMON APP HERE]
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Search for a Pokémon</h5>
+                    <div class="mb-3">
+                        <label for="pokemonInput" class="form-label">Enter Pokémon Name or ID</label>
+                        <input type="text" class="form-control" id="pokemonInput" placeholder="e.g., pikachu, 25, charizard">
+                    </div>
+                    <button type="button" id="pokemonButton" class="btn btn-danger">Search Pokémon</button>
+                    
+                    <div id="pokemonResult" class="pokemon-result">
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img id="pokemonSprite" class="pokemon-sprite" src="" alt="Pokemon sprite">
+                            </div>
+                            <div class="col-md-8">
+                                <h3 id="pokemonName" class="text-capitalize"></h3>
+                                <p><strong>ID:</strong> <span id="pokemonId"></span></p>
+                                <p><strong>Types:</strong></p>
+                                <div id="pokemonTypes"></div>
+                                <p><strong>Height:</strong> <span id="pokemonHeight"></span></p>
+                                <p><strong>Weight:</strong> <span id="pokemonWeight"></span></p>
+                                <p><strong>Abilities:</strong> <span id="pokemonAbilities"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="pokemonError" class="alert alert-danger mt-3" style="display: none;" role="alert">
+                        Pokémon not found! Please try another name or ID.
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

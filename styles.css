@@ -4,10 +4,12 @@ body {
     flex-direction: column;
     align-items: center;
     font-size: 18px;
+    background-color: #f8f9fa;
+    padding-bottom: 40px;
 }
 
 h1 {
-    font-size: 36x;
+    font-size: 36px;
 }
 
 .api-section {
@@ -17,10 +19,41 @@ h1 {
     border: 1px solid #999;
     border-radius: 4px;
     margin: 24px 24px 0;
+    background-color: white;
 }
 
 .api-content {
-    font-weight: bold;
-    font-style: italic;
-    color: #999;
+    margin-top: 20px;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+#image.show {
+    display: block;
+}
+
+.pokemon-result {
+    display: none;
+    margin-top: 20px;
+}
+
+.pokemon-result.show {
+    display: block;
+}
+
+.pokemon-sprite {
+    width: 200px;
+    height: 200px;
+}
+
+.type-badge {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
 }
