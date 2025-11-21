@@ -9,28 +9,52 @@ body {
 }
 
 h1 {
-    font-size: 36px;
+    margin: 0 0 8px 0;
+    font-size: 1.4rem;
 }
 
 .api-section {
     width: 90%;
     max-width: 900px;
-    padding: 24px;
-    border: 1px solid #999;
-    border-radius: 4px;
-    margin: 24px 24px 0;
-    background-color: white;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px 24px 0;
+}
+
+.api-section .card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Make card bodies use a consistent vertical layout */
+.api-section .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
 }
 
 .api-content {
-    margin-top: 20px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+/* Images: cap width, keep aspect ratio and center */
+#image,
+.pokemon-sprite {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+    margin: 12px auto 0;
 }
 
 #image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 8px;
     display: none;
 }
 
@@ -40,20 +64,56 @@ h1 {
 
 .pokemon-result {
     display: none;
-    margin-top: 20px;
+    margin-top: 12px;
+    width: 100%;
 }
 
 .pokemon-result.show {
     display: block;
 }
 
+/* Ensure the pokemon result grid centers the image and keeps content readable */
+.pokemon-result .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pokemon-result .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-result .col-md-8 {
+    text-align: left;
+    max-width: 540px;
+}
+
 .pokemon-sprite {
-    width: 200px;
-    height: 200px;
+    max-width: 220px;
 }
 
 .type-badge {
     display: inline-block;
     margin-right: 8px;
     margin-bottom: 8px;
+    padding: 6px 8px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+#catFactDisplay {
+    max-width: 720px;
+    margin: 0 auto;
+    font-style: normal;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+    .pokemon-result .col-md-8 {
+        text-align: center;
+    }
 }

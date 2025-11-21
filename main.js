@@ -74,3 +74,19 @@ function searchPokemon() {
             pokemonError.style.display = 'block';
         });
 }
+
+// Part 3 – Cat Facts Generator
+const catFactButton = document.querySelector('#catFactButton');
+const catFactDisplay = document.querySelector('#catFactDisplay');
+
+catFactButton?.addEventListener('click', () => {
+  fetch('https://catfact.ninja/fact')
+    .then(res => res.json())
+    .then(data => {
+      catFactDisplay.textContent = data.fact;
+    })
+    .catch(err => {
+      catFactDisplay.textContent = 'Could not get cat fact. Try again!';
+      console.error(err);
+    });
+});
